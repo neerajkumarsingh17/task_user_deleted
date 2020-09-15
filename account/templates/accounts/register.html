@@ -1,0 +1,32 @@
+<h3 id="form-title">REGISTER ACCOUNT</h3>
+				
+
+    <form method="POST" action="">
+        {% csrf_token %}
+            <div><spam>username</spam>
+            {{form.username}}
+            </div>
+            <div><spam>email</spam>
+            {{form.email}}
+            </div>
+            <div><spam>password1</spam>
+            {{form.password1}}
+            </div>
+            <div><spam>password2</spam>
+            {{form.password2}}
+            </div>
+        
+
+
+
+        
+            <input class="btn login_btn" type="submit" value="Register Account">
+        
+
+    </form>
+
+    {{form.errors}}
+				
+    <div>
+        Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
+    </div>
